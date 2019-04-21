@@ -34,10 +34,13 @@ open class Spinner {
 
 To implement Spinner, just go to the View Controller. Then, in place where indicator should start animating (i.e. viewDidLoad or viewWillAppear) just put Spinner.start(). Or, if you want personalize style, backColor and/or baseColor:
 
-func viewDidLoad() {
-    Spinner.start(style: .white, backgroundColor: UIColor.white, color: UIColor.red)
+override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Spinner.start(style: .white, backgroundColor: UIColor.white, color: UIColor.red)
 }
 
-Then, in a place where processing is done, simply put: Spinner.stop()
+Then, in a place where processing is done, simply put: 
+        Spinner.stop()
 
 
